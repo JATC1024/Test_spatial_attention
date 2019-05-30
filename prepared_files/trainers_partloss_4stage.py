@@ -83,7 +83,7 @@ class Trainer(BaseTrainer):
     def _forward(self, inputs, targets):
         outputs = self.model(*inputs)
         index = (targets-751).data.nonzero().squeeze_()
-		for o in outputs:
+        for o in outputs:
             print(o)
 
         if isinstance(self.criterion, torch.nn.CrossEntropyLoss):
